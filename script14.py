@@ -24,10 +24,10 @@ lower = np.array([ 90,  9, 248])
 upper = np.array([130, 68, 255])
 
 ## call inRange create the mask
-mask = cv2.inRange(img_hsv, lower, upper)
+
 
 ## apply mask to the image
-result = cv2.bitwise_and(img, img, mask = mask)
+
 
 ########################
 
