@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 
 #######################
 ### Read an Image #####
-img = cv2.imread('blue.jpg')
+img = cv2.imread('images/blue.jpg')
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 ############################
