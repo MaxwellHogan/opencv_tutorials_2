@@ -25,7 +25,7 @@ img = cv2.imread('images/snow.jpg')
 ######### Convert img to RGB ############
 
 
-## plot the image to makesure
+## plot the image to makesure that the colors are correct
 plt.imshow(img)
 plt.show()
 

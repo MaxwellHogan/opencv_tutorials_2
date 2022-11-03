@@ -44,13 +44,13 @@ cv2.waitKey(0)
 ##### Calculate the lower and upper limits ######
 
 ## Note lower and upper are expected to be numpy arrays 
-lower = 
-upper = 
+lower = np.array([ 90,  9, 248])
+upper = np.array([130, 68, 255])
 
 ######################################
 ##### create and apply the mask ######
 
-# use inRange with the lower and upper limits defined above  
+# use inRange with the lower and upper limits defined above to create the mask  
 mask = 
 
 ## apply mask to the image using bitwise_and

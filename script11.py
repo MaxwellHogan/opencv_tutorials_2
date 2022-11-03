@@ -10,7 +10,7 @@ tutorial: https://docs.opencv.org/4.x/d4/d1b/tutorial_histogram_equalization.htm
 
 Tasks to be done in this script:
     - perform histogram equalisation on the image and store the new image as 'equalized'
-    - calculate the histgrams for the original imag and for 'equalized' (store them as before and after)
+    - calculate the histgrams for the original image and for 'equalized' (store them as before and after)
     - plot the results by filling in the missing part of the code.
 
 '''
@@ -31,7 +31,7 @@ plt.show()
 ######################################################
 ##### Perform histogram equalisation Histogram #######
 
-equalized = 
+equalized = cv2.equalizeHist()
 
 #############################################
 ########### Create the Histograms ###########

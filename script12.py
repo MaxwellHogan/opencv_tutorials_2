@@ -43,7 +43,7 @@ plt.show()
 
 fig, axs = plt.subplots(1,3, figsize = (10,5))
 
-for i, col in enumerate(['b','g','r']):
+for i, col in enumerate(['r','g','b']):
 
 
 plt.show()

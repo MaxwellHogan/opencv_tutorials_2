@@ -1,5 +1,22 @@
+'''
+In this script we will be demoing Harris corners which was covered in the
+lecture 3.
+
+The first step for you will be to apply the cv2.cornerHarris operation to the image.
+The required arguments for cv2.cornerHarris are as follows:
+    img - Input image. It should be grayscale and float32 type.
+    blockSize - It is the size of neighbourhood considered for corner detection
+    ksize - Aperture parameter of the Sobel derivative used.
+    k - Harris detector free parameter in the equation (use 0.07)
+
+The operation will then return a map where the maxima are the location of the 
+corners in the image. We want you to be able to highlight the corners in the
+original image, to do this you will need to apply a threshold to only keep the
+maximum values. 
+
+'''
+
 ### Import OpenCV & numpy #####
-from re import A
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7,31 +24,29 @@ import matplotlib.pyplot as plt
 ### Read an Image #####
 
 img = cv2.imread('images/sudoku.png')
-img_gs = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-#####  HOUGH LINE ######
+###############################
+### Pre-process the image #####
 
-edge = cv2.Canny(img_gs, 15, 450, apertureSize=3)
 
-lines = cv2.HoughLines(edge, 1, np.pi/180, 200)
+###############################
+##### Apply Harris Corner #####
 
-for line in lines:
-    for rho, theta in line:
-        a = np.cos(theta)
-        b = np.sin(theta)
+corner = cv2.cornerHarris()
 
-        x0 = a*rho
-        y0 = b*rho
-        x1 = int(x0 + 500*(-b))
-        y1 = int(y0 + 500*(a))
-        x2 = int(x0 - 500*(-b))
-        y2 = int(y0 - 500*(a))
+###############################
+##### Set a value for thr #####
 
-        cv2.line(img, (x1,y1), (x2,y2), (0,0,255), 2)
+# Threshold for an optimal value, it may vary depending on the image.
+thr = 
+img[corner > thr * corner.max()] = [0,0,255]
 
 ########################
 cv2.imshow('main', img)
+cv2.imshow('corner', corner)
 cv2.waitKey(0)
 
-##Exiting Function######S
+
+##Exiting Function######
+
 cv2.destroyAllWindows()

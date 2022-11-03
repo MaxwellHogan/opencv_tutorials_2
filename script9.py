@@ -12,7 +12,6 @@ order to continue the program to the end, exit the window.
 '''
 
 ### Import OpenCV & numpy #####
-from cgitb import grey
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -28,7 +27,7 @@ gray =
 
 ############################################
 ########### Create the Histogram ###########
-hist = 
+hist = cv2.calcHist()
 
 ################################################
 ### Plot the Histogram and display the image ###

@@ -38,13 +38,12 @@ img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) ## just for display
 ####  Equalize the value channel ####
 
 
-
 #######################################
 ### Use merge to combine channels #####
 
 
-#########################################
-### Conver image to rgb for display #####
+##########################################
+### Convert image to rgb for display #####
 
 
 ###############################
