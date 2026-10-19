@@ -20,18 +20,22 @@
 
 import cv2
 import numpy as np
-from skimage.util import random_noise
 
 #######################
 ### Read an Image #####
 img = cv2.imread("images/dashcam.jpeg")
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 ##############################################
 ############### Salt & Pepper ################
 
 ## DO NOT CHANGE
-img = random_noise(img,mode="s&p",amount=0.3)
-noise = np.array(255*img, dtype= 'uint8')
+amount = 0.3
+rng = np.random.default_rng()
+mask = rng.random(img.shape[:2])
+noise = img.copy()
+noise[mask < amount / 2] = 0
+noise[(mask >= amount / 2) & (mask < amount)] = 255
 
 #########################################
 ##########  Your Solution ###############
