@@ -12,7 +12,6 @@
 # Hint: Use one of the bluring technique                              #
 #       Choose a suitable kerne_size.                                 #
 #                                                                     #
-#  mahmoud.abdulsalam@city.ac.uk                                      #
 #######################################################################
 
 
